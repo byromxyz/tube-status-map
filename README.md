@@ -19,6 +19,7 @@ https://byromxyz.github.io/tube-status-map/
 - Integrate statuses between stations, instead of applying them to the whole line.
 - Test. The logic is pretty straightforward - any tests would just duplicate the code logic.
 - Poll the API.
+- Reconsider how conditional styles should be applied. Using `createGlobalStyles` feels a bit off.
 
 ## Installation
 - Clone the repo
