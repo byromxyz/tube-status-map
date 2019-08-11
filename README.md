@@ -18,6 +18,6 @@ This obviously isn't ideal but serves as a basic example for now. Please don't u
 - Poll the API.
 
 ## Installation
-- Clone to repo
+- Clone the repo
 - `npm install`
 - `npm start`
