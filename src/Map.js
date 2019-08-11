@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     font-family: 'HammersmithOne', 'Hammersmith One';
     font-size: 5px;
   }
-`;
+`
 
 const minorFlash = keyframes`
   from {
@@ -27,7 +27,7 @@ const minorFlash = keyframes`
   to {
     stroke-dashoffset: 75;
   }
-`;
+`
 
 const majorFlash = keyframes`
   from {
@@ -37,7 +37,7 @@ const majorFlash = keyframes`
   to {
     stroke-dashoffset: 25;
   }
-`;
+`
 
 const minorCSS = lineId => css`
   line[id*="lul-${lineId}"],
@@ -91,9 +91,9 @@ const transformLineStatuses = (lineStatuses) =>
  * Takes the raw array response from TfL Status API and transforms it
  * into something a little more understandable
  * https://api-portal.tfl.gov.uk/docs
- * @param {[TfL Line Response]} data
+ * @param {[TfL Status Response]} tubeLines
  */
-const transformApiResponse = data => data.map(line => ({
+const transformApiResponse = tubeLines => tubeLines.map(line => ({
   id: line.id,
   disruptions: transformDisruptions(line.disruptions),
   statuses: transformLineStatuses(line.lineStatuses),
@@ -111,9 +111,9 @@ const lineStatusesToCSS = (lineId, lineStatuses) => {
   )
   switch (maxSeverity) {
     case simpleSeverities.MINOR:
-      return minorCSS(lineId);
+      return minorCSS(lineId)
     case simpleSeverities.MAJOR:
-      return majorCSS(lineId);
+      return majorCSS(lineId)
     default:
       return ''
   }
@@ -127,28 +127,41 @@ const statusToCSS = status => status.map(line => lineStatusesToCSS(line.id, line
 
 const StylesFromStatus = createGlobalStyle`
   ${props => statusToCSS(props.status)}
-`;
+`
 
-const onInit = (setStatus) => () => {
+const onInit = (setLoading, setStatus) => () => {
   async function loadStatus() {
+    setLoading(true)
     const { data } = await axios.get('https://api.tfl.gov.uk/line/mode/tube/status')
     const lineStatus = transformApiResponse(data)
     setStatus(lineStatus)
-    console.log('API RESP:', data);
+    setLoading(false)
+    console.log('API RESP:', data)
   }
-  
-  loadStatus();
+
+  loadStatus()
 }
 
 export default () => {
   const [status, setStatus] = useState([])
-  useEffect(onInit(setStatus), [])
+  const [loading, setLoading] = useState(true)
+  
+  useEffect(onInit(setLoading, setStatus), [])
+
+  const renderMap = (
+    <>
+      <StylesFromStatus status={status} />
+      <MapDay />
+    </>
+  )
 
   console.log('STATUS:', status)
   return (
     <Wrapper>
-      <StylesFromStatus status={status} />
-      <MapDay />
+      {loading
+        ? <p>Loading</p>
+        : renderMap
+      }
     </Wrapper>
   )
 }
