@@ -11,17 +11,14 @@ obviously isn't ideal but serves as a basic example for now.
 
 Please don't use it to plan your commute.
 
-## Todo
+## Demo
+https://byromxyz.github.io/tube-status-map/
 
+## Todo
 - Allow toggling line statuses for demonstration.
 - Integrate statuses between stations, instead of applying them to the whole line.
 - Test. The logic is pretty straightforward, so any tests would just duplicate the code logic.
 - Poll the API.
-
-
-## Demo
-
-https://byromxyz.github.io/tube-status-map/
 
 ## Installation
 - Clone the repo
