@@ -19,6 +19,7 @@ Please don't use it to plan your commute.
 - Poll the API.
 
 ## Demo
+
 https://byromxyz.github.io/tube-status-map/
 
 ## Installation
