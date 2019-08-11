@@ -12,7 +12,7 @@ This obviously isn't ideal but serves as a basic example for now. Please don't u
 
 ## Todo
 
-- Allow toggling line statuses for demonstration
-- Integrate statuses between stations, instead of applying them to the whole line
+- Allow toggling line statuses for demonstration.
+- Integrate statuses between stations, instead of applying them to the whole line.
 - Test. The logic is pretty straightforward, so any tests would just duplicate the code logic.
-- Poll the API
+- Poll the API.
