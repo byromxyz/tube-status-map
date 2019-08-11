@@ -18,7 +18,8 @@ Please don't use it to plan your commute.
 - Test. The logic is pretty straightforward, so any tests would just duplicate the code logic.
 - Poll the API.
 
-## Demo
+
+## Demo
 
 https://byromxyz.github.io/tube-status-map/
 
