@@ -6,9 +6,10 @@ Using the [TfL Status API](https://api.tfl.gov.uk/line/mode/tube/status), a rank
 Major disruption) is calculated for all lines and conditional styles are applied to animate them.
 
 The ranking for the whole line is determined by the highest severity level of disruption on that line. This means if a
-line is part suspended between two adjacent stations, the whole line is considered to have a major disruption.
+line is part suspended between two adjacent stations, the whole line is considered to have a major disruption. This
+obviously isn't ideal but serves as a basic example for now.
 
-This obviously isn't ideal but serves as a basic example for now. Please don't use it to plan your commute.
+Please don't use it to plan your commute.
 
 ## Todo
 
