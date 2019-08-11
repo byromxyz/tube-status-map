@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/tube-status-map/static/js/main.238fbaba.chunk.js",
+    "main.js.map": "/tube-status-map/static/js/main.238fbaba.chunk.js.map",
+    "runtime~main.js": "/tube-status-map/static/js/runtime~main.72f310eb.js",
+    "runtime~main.js.map": "/tube-status-map/static/js/runtime~main.72f310eb.js.map",
+    "static/js/2.7961d696.chunk.js": "/tube-status-map/static/js/2.7961d696.chunk.js",
+    "static/js/2.7961d696.chunk.js.map": "/tube-status-map/static/js/2.7961d696.chunk.js.map",
+    "index.html": "/tube-status-map/index.html",
+    "precache-manifest.8f7a21bf7f442cb39ab38f1b3add49bc.js": "/tube-status-map/precache-manifest.8f7a21bf7f442cb39ab38f1b3add49bc.js",
+    "service-worker.js": "/tube-status-map/service-worker.js"
+  }
+}
