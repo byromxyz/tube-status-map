@@ -16,3 +16,8 @@ This obviously isn't ideal but serves as a basic example for now. Please don't u
 - Integrate statuses between stations, instead of applying them to the whole line.
 - Test. The logic is pretty straightforward, so any tests would just duplicate the code logic.
 - Poll the API.
+
+## Installation
+- Clone to repo
+- `npm install`
+- `npm start`
