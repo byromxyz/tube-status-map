@@ -1,6 +1,8 @@
 # Tube Status Map
 Renders an SVG map of the Tube, ~Overground, and DLR lines~ and (primitively) animates each line with a status.
 
+**Note** Overground and DLR status do not work atm.
+
 ## Logic
 Using the [TfL Status API](https://api.tfl.gov.uk/line/mode/tube/status), a ranking (No disruption, Minor disruption,
 Major disruption) is calculated for all lines and conditional styles are applied to animate them.
