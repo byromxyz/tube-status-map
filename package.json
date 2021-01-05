@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://byromxyz.github.io/tube-status-map/",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
